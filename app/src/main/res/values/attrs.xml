@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="SliderView">
+        <attr name="label" format="string" />
+        <attr name="max" format="integer" />
+    </declare-styleable>
+</resources>

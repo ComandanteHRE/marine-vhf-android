@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#FF0B0E12" android:orientation="vertical" android:padding="6dp">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="6.6"
+        android:background="@drawable/bg_panel" android:orientation="vertical" android:padding="10dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center_vertical" android:orientation="horizontal" android:paddingBottom="6dp">
+            <TextView style="@style/Title" android:text="MARINE VHF  •  RTL-SDR" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:id="@+id/tStatus" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginLeft="8dp" android:singleLine="true" android:ellipsize="end" android:textColor="#FF6F8299" android:textSize="12sp" />
+            <Button android:id="@+id/bSide" style="@style/Chip" android:text="БЕРЕГ" />
+            <Button android:id="@+id/bConn" style="@style/Chip" android:text="ПОДКЛ" />
+            <Button android:id="@+id/bSet" style="@style/Chip" android:text="⚙" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal">
+            <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="11" android:orientation="vertical">
+                <com.marinevhf.app.LcdView android:id="@+id/lcd" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1.2" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0" android:orientation="horizontal">
+                    <Button android:id="@+id/bRec" style="@style/Fn" android:text="● ЗАПИСЬ" android:layout_height="46dp" android:layout_weight="1" android:layout_width="0dp" android:textColor="#FFFF4B40" android:textSize="15sp" />
+                    <Button android:id="@+id/bUp" style="@style/Fn" android:text="▲" android:layout_height="46dp" android:layout_weight="1" android:layout_width="0dp" android:textSize="20sp" />
+                    <Button android:id="@+id/bScan" style="@style/Fn" android:text="СКАН" android:layout_height="46dp" android:layout_weight="1" android:layout_width="0dp" />
+                    <Button android:id="@+id/b16" style="@style/Fn" android:text="16" android:layout_height="46dp" android:layout_weight="1" android:layout_width="0dp" android:textSize="30sp" android:background="@drawable/btn_red" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0" android:orientation="horizontal">
+                    <Button android:id="@+id/bAis" style="@style/Fn" android:text="АИС" android:layout_height="46dp" android:layout_weight="1" android:layout_width="0dp" />
+                    <Button android:id="@+id/bDown" style="@style/Fn" android:text="▼" android:layout_height="46dp" android:layout_weight="1" android:layout_width="0dp" android:textSize="20sp" />
+                    <Button android:id="@+id/bMode" style="@style/Fn" android:text="КАНАЛ /\nЧАСТОТА" android:layout_height="46dp" android:layout_weight="1" android:layout_width="0dp" android:textSize="12sp" />
+                    <Button android:id="@+id/kClr" style="@style/Fn" android:text="CLR" android:layout_height="46dp" android:layout_weight="1" android:layout_width="0dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="5" android:orientation="vertical" android:paddingLeft="6dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal">
+                    <Button android:id="@+id/k1" style="@style/Key" android:text="1" />
+                    <Button android:id="@+id/k2" style="@style/Key" android:text="2" />
+                    <Button android:id="@+id/k3" style="@style/Key" android:text="3" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal">
+                    <Button android:id="@+id/k4" style="@style/Key" android:text="4" />
+                    <Button android:id="@+id/k5" style="@style/Key" android:text="5" />
+                    <Button android:id="@+id/k6" style="@style/Key" android:text="6" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal">
+                    <Button android:id="@+id/k7" style="@style/Key" android:text="7" />
+                    <Button android:id="@+id/k8" style="@style/Key" android:text="8" />
+                    <Button android:id="@+id/k9" style="@style/Key" android:text="9" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal">
+                    <Button android:id="@+id/kDot" style="@style/Key" android:text="·" />
+                    <Button android:id="@+id/k0" style="@style/Key" android:text="0" />
+                    <Button android:id="@+id/kEnt" style="@style/Key" android:text="ENT" android:textColor="#FFB8F5C4" android:background="@drawable/btn_green" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2.8" android:orientation="horizontal" android:paddingLeft="6dp">
+                <com.marinevhf.app.SliderView android:id="@+id/slSql" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" app:label="SQL" app:max="10" />
+                <com.marinevhf.app.SliderView android:id="@+id/slVol" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" app:label="VOL" app:max="10" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="3.4"
+        android:layout_marginTop="8dp" android:background="@drawable/bg_chart" android:orientation="vertical" android:padding="12dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <TextView style="@style/Title" android:text="ОБЗОР КАНАЛОВ" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:id="@+id/tScan" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginLeft="8dp" android:textColor="#FF7E93AA" android:textSize="11sp"
+                android:text="синий — судовая сторона, бирюзовый — береговая; клик — слушать канал" />
+        </LinearLayout>
+        <com.marinevhf.app.ChannelChart android:id="@+id/chart" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+        <TextView android:id="@+id/tAisHead" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingTop="4dp" android:singleLine="true" android:ellipsize="start" android:textColor="#FF4FC3F7" android:textSize="11sp" android:text="АИС: 0 — нажмите, чтобы открыть журнал" />
+    </LinearLayout>
+</LinearLayout>
